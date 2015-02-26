@@ -8,15 +8,15 @@ Usage:
 """
 
 import os
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setup(
-    name="ava.key",
-    version="0.1.1",
+    name="ava-key",
+    version="0.1.3",
     description="Key generator and validator.",
     zip_safe=True,
     author='Sam Kuo',
@@ -32,7 +32,7 @@ setup(
         "Programming Language :: Python :: Implementation :: CPython",
         "Operating System :: OS Independent",
     ],
-    packages=['ava'],
+    packages=find_packages(),
     long_description=read('README.rst'),
     install_requires=[
         "base58>=0.2.1",
