@@ -12,7 +12,7 @@ Requirements:
 
 Usage
 ====================================
-``Usage: ava-key.py [OPTIONS] COMMAND [ARGS]...
+Usage: ava-key.py [OPTIONS] COMMAND [ARGS]...
 
 Options:
   -v, --verbose  Enables verbose mode.
@@ -21,4 +21,3 @@ Options:
 Commands:
   generate
   validate
-``
