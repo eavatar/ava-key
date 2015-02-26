@@ -4,14 +4,11 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 import sys
 import json
 import click
-import logging
 import hashlib
 import pyscrypt
 import base58
-import binascii
 import libnacl.public
 import libnacl.secret
-logger = logging.getLogger("ava-key")
 
 XID_PREFIX = b'\xea'
 
@@ -42,34 +39,6 @@ def key_to_xid(key):
     addr = XID_PREFIX + key + sum[:2]
 
     return base58.b58encode(addr)
-
-
-def xid_to_key(xid):
-    """
-    Retrieve the key from an XID.
-
-    :param xid:
-    :return:
-    """
-    val = base58.b58decode(xid)
-
-    if len(val) != 35:
-        return None
-
-    prefix = val[0]
-    if prefix != XID_PREFIX:
-        return None
-
-    key = val[1:33]
-    sha256 = hashlib.sha256()
-    sha256.update(XID_PREFIX)
-    sha256.update(key)
-    sum = sha256.digest()
-
-    if val[-2:] != sum[:2]:
-        return None
-
-    return key
 
 
 def validate_xid(addr):
