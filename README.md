@@ -14,12 +14,14 @@ Usage
 ====================================
 Usage: ava-key.py [OPTIONS] COMMAND [ARGS]...
 
-Options:
+Options:  
+
   -v, --verbose  Enables verbose mode.  
   
   --help         Show this message and exit.
 
-Commands:
+Commands:  
+
   generate
   
   validate
