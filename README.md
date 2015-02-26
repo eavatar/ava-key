@@ -12,16 +12,11 @@ Requirements:
 
 Usage
 ====================================
-Usage: ava-key.py [OPTIONS] COMMAND [ARGS]...
+    Usage: ava-key.py [OPTIONS] COMMAND [ARGS]...
+    Options:
+        -v, --verbose  Enables verbose mode.
+        --help         Show this message and exit.
 
-Options:  
-
-  -v, --verbose  Enables verbose mode.  
-  
-  --help         Show this message and exit.
-
-Commands:  
-
-  generate
-  
-  validate
+    Commands:
+        generate
+        validate
